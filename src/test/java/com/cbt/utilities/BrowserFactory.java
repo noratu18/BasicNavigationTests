@@ -9,29 +9,41 @@ import org.openqa.selenium.safari.SafariDriver;
 
 public class BrowserFactory {
 
+    private static WebDriver driver;
+
     /**
      * Create a public static method getDriver which takes a string argument
+     *
      * @param browserName
      * @return
      */
-    public static WebDriver getDriver(String browserName){
+    public static WebDriver getDriver(String browserName) {
         String osName = System.getProperty("os.name");
-        if((osName.contains("mac")&&browserName.equalsIgnoreCase("edge"))){
+        if ((osName.contains("mac") && browserName.equalsIgnoreCase("edge"))) {
             return null;
-        }else if(browserName.equalsIgnoreCase("chrome")){
+        } else if (browserName.equalsIgnoreCase("chrome")) {
             WebDriverManager.chromedriver().version("79.0").setup();
             return new ChromeDriver();
-        }else if(browserName.equalsIgnoreCase("firefox")) {
+        } else if (browserName.equalsIgnoreCase("firefox")) {
             WebDriverManager.firefoxdriver().setup();
             return new FirefoxDriver();
-        }else if(browserName.equalsIgnoreCase("edge")){
+        } else if (browserName.equalsIgnoreCase("edge")) {
             WebDriverManager.edgedriver().setup();
             return new EdgeDriver();
-        }else if(browserName.equalsIgnoreCase("safari")) {
+        } else if (browserName.equalsIgnoreCase("safari")) {
             return new SafariDriver();
-        }else{
+        } else {
             WebDriverManager.chromedriver().version("79.0").setup();
             return new ChromeDriver();
+        }
+
+
+    }
+
+    public static void closeDriver() {
+        if (driver != null) {
+            driver.quit();
+            driver = null;
         }
 
     }
