@@ -1,4 +1,4 @@
-package com.cbt.herokuApp.homework2;
+package com.cbt.herokuApp.homework4;
 
 import com.cbt.utilities.BrowserFactory;
 import com.cbt.utilities.BrowserWait;

@@ -1,4 +1,4 @@
-package com.cbt.herokuApp.homework2;
+package com.cbt.herokuApp.homework4;
 
 import com.cbt.utilities.BrowserFactory;
 import com.cbt.utilities.BrowserWait;
@@ -19,12 +19,12 @@ import java.util.List;
  * 4.verify that all results are cheaper than $25
  */
 
-public class LessThan25 {
+public class CheapSpoons {
 
     private WebDriver driver = BrowserFactory.getDriver("chrome");
 
 
-    @Test
+    @Test(description = "Verify that all results are cheaper than $25")
     public void test(){
         driver.get("https://amazon.com");
         driver.findElement(By.id("twotabsearchtextbox")).sendKeys("wooden spoon", Keys.ENTER);

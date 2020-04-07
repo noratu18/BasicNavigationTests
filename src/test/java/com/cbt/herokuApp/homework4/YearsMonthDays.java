@@ -1,4 +1,4 @@
-package com.cbt.herokuApp.homework2;
+package com.cbt.herokuApp.homework4;
 
 import com.cbt.utilities.BrowserFactory;
 import org.openqa.selenium.By;
@@ -21,7 +21,7 @@ import java.util.Random;
 public class YearsMonthDays {
     private WebDriver driver = BrowserFactory.getDriver("chrome");
 
-    @Test
+    @Test(description = "Verify that days dropdown has current number of days")
     public void test(){
         driver.get("http://practice.cybertekschool.com/dropdown");
 

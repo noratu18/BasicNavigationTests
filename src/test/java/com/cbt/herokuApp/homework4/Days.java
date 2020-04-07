@@ -1,4 +1,4 @@
-package com.cbt.herokuApp.homework2;
+package com.cbt.herokuApp.homework4;
 
 import com.cbt.utilities.BrowserFactory;
 import com.cbt.utilities.BrowserWait;
@@ -16,7 +16,7 @@ import java.util.Random;
  * After you check and uncheck Friday for the third time, exit the program.
  */
 
-public class RandomSelection {
+public class Days {
 
     /*
     1.Go to http://samples.gwtproject.org/samples/Showcase/Showcase.html#!CwCheckBox
