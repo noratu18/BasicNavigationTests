@@ -22,7 +22,7 @@ public class BrowserFactory {
         if ((osName.contains("mac") && browserName.equalsIgnoreCase("edge"))) {
             return null;
         } else if (browserName.equalsIgnoreCase("chrome")) {
-            WebDriverManager.chromedriver().version("79.0").setup();
+            WebDriverManager.chromedriver().setup();
             return new ChromeDriver();
         } else if (browserName.equalsIgnoreCase("firefox")) {
             WebDriverManager.firefoxdriver().setup();

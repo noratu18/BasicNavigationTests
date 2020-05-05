@@ -32,7 +32,7 @@ public class CheapSpoons {
 
         //we collect only dollar values from the price of every item
         List<WebElement> prices = driver.findElements(By.className("a-price-whole"));
-        // we convert collection of web element intocollectionof strings
+        // we convert collection of web element into collection of strings
         List<String> pricesText = BrowserWait.getTextFromWebElements(prices);
         System.out.println(pricesText);
             for(String price : pricesText){
